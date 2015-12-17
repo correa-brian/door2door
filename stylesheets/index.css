@@ -1,4 +1,55 @@
-h1{
-	color: red;
-	text-align: center;
+html, body {
+	margin: 0;
+	padding: 0;
+	font-family: Georgia,sans-serif;
 }
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.header {
+	height: 45px;
+	padding: 25px; 
+}
+
+.nav {
+	background: #ff5050;
+	display: inline-block;
+	margin: 0;
+	padding: 10px 0;
+	text-align: center;
+	border-radius: 10px;
+}
+
+.nav li {
+	color: #fff;
+	display: inline;
+	margin: 55px;
+	font-size: 18px;
+	background: white;
+	padding: 3px 15px;
+	border-radius: 10px;
+}
+
+.nav li a {
+	text-decoration: none;
+	color: red;
+}
+
+.nav li a:hover {
+	text-transform: uppercase;
+}
+
+.main {
+	text-align: center;
+	position: relative;
+	color: blue;
+}
+
+.main li {
+	display: inline-block;
+	padding: 25px;
+}
+
