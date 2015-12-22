@@ -14,6 +14,7 @@ function newGame() {
 
 	while (playing) {
 		var playing = false;
+		
 		var opponent = prompt("Great to have you board. You'll need to give your competitor a name");
 		var opponent = new Competitor(opponent);
 		alert(opponent.name+ ": "+ "I'm gonna kick your ass!");
@@ -24,7 +25,7 @@ function newGame() {
 			
 			alert(neighbor1.name+ ": "+ "Hi there, I'm interested in buying some Chicken. Make me an offer.");
 			
-			var price1 = prompt("Name your price/lb in $ (just a number, no need for dollar signs)");
+			var price1 = prompt("Name your price/lb in $ (just a number, no need for dollar signs):");
 			console.log(price1);
 				if (isNaN(price1)) {
 					alert("Need a number, dude");
@@ -62,9 +63,9 @@ function newGame() {
 			var neighbor2 = prompt("Give your second neighbor a name:");
 			var neighbor2 =  new Neighbor(neighbor2);
 			
-			alert(neighbor2.name+ ": "+ "Hey, I'd like to buy hair, please.");
+			alert(neighbor2.name+ ": I'd like to buy hair, please.");
 			
-			var price2 = prompt("Name your price/lb");
+			var price2 = prompt("Name your price/lb:");
 			console.log(price2);
 				if (isNaN(price2)) {
 					alert("Need a number, dude");
@@ -142,7 +143,7 @@ function newGame() {
 */
 		var totalRevenue = firstStop() + secondStop()+ thirdStop();
 
-		console.log(totalRevenue);
+		console.log();
 	};
 };
 

@@ -1,7 +1,8 @@
 html, body {
 	margin: 0;
 	padding: 0;
-	font-family: Georgia,sans-serif;
+	font-family: arial,sans-serif;
+	font-weight: normal;
 }
 
 body {
@@ -21,6 +22,8 @@ body {
 	padding: 10px 0;
 	text-align: center;
 	border-radius: 10px;
+	margin-left: 350px;
+	margin-top: 10px;
 }
 
 .nav li {
@@ -46,6 +49,9 @@ body {
 	text-align: center;
 	position: relative;
 	color: blue;
+	border: 3px solid #00BFFF;
+	height: 500px;
+	width: 100%;
 }
 
 .main li {
@@ -53,3 +59,10 @@ body {
 	padding: 25px;
 }
 
+.btn {
+	text-decoration: none;
+	background-color: #00BFFF;
+	color: white;
+	padding: 10px 25px;
+	border-radius: 10px;
+}
