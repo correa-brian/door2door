@@ -3,66 +3,133 @@ html, body {
 	padding: 0;
 	font-family: arial,sans-serif;
 	font-weight: normal;
+	background-color: rgb(255,255,255);
+	width: 100%;
 }
 
 body {
 	margin: 0;
 	padding: 0;
+	width: 100%;
+}
+
+.container {
+/*	margin: auto 940px;*/
 }
 
 .header {
-	height: 45px;
-	padding: 25px; 
+	height: 50px;
+	padding: 5px 0;
+	width: 100%; 
 }
 
 .nav {
-	background: #ff5050;
-	display: inline-block;
-	margin: 0;
-	padding: 10px 0;
+	width: 100%;
+	border: 25px;
+	padding: 25px;
 	text-align: center;
-	border-radius: 10px;
-	margin-left: 350px;
-	margin-top: 10px;
+	border: 25px;
+	border-style: 1px blue solid;
 }
 
 .nav li {
-	color: #fff;
 	display: inline;
 	margin: 55px;
 	font-size: 18px;
-	background: white;
-	padding: 3px 15px;
-	border-radius: 10px;
+	background: #F08080;
+	padding: 3px 18px;
+	border-radius: 7px;
+	width: 100%;
 }
 
 .nav li a {
 	text-decoration: none;
-	color: red;
+	color: rgb(255,255,255);
 }
 
 .nav li a:hover {
 	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
 }
 
 .main {
+	width: 100%;
 	text-align: center;
 	position: relative;
-	color: blue;
-	border: 3px solid #00BFFF;
+	color: #00BFFF;
 	height: 500px;
-	width: 100%;
+	width: auto;
+	margin: 50px 0px 0 0;
+	font-weight: 300;
 }
 
 .main li {
+	margin: 10px 130px 0 100px;
 	display: inline-block;
-	padding: 25px;
 }
 
-.btn {
+.button {
 	text-decoration: none;
 	background-color: #00BFFF;
-	color: white;
-	padding: 10px 25px;
-	border-radius: 10px;
+	position: relative;
+	color: rgb(255,255,255);
+	margin: 0 475px;
+	padding: 3px 15px;
+	border: #F08080 solid 5px;
+	border-radius: 7px;
+	font-size: 15px;
+	max-width: 100%;
+	height: auto;
 }
+
+.jumbotron {
+	width: 100%;
+	background-color: #F08080;
+	height: 500px;
+}
+
+/* For mobile phones: */
+[class*="body-"] {
+    width: 100%;
+}
+
+@media only screen (min-width: 600px) {
+	/* For tablets: */
+    .body-m-1 {width: 8.33%;}
+    .body-m-2 {width: 16.66%;}
+    .body-m-3 {width: 25%;}
+    .body-m-4 {width: 33.33%;}
+    .body-m-5 {width: 41.66%;}
+    .body-m-6 {width: 50%;}
+    .body-m-7 {width: 58.33%;}
+    .body-m-8 {width: 66.66%;}
+    .body-m-9 {width: 75%;}
+    .body-m-10 {width: 83.33%;}
+    .body-m-11 {width: 91.66%;}
+    .body-m-12 {width: 100%;}
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .body-1 {width: 8.33%;}
+    .body-2 {width: 16.66%;}
+    .body-3 {width: 25%;}
+    .body-4 {width: 33.33%;}
+    .body-5 {width: 41.66%;}
+    .body-6 {width: 50%;}
+    .body-7 {width: 58.33%;}
+    .body-8 {width: 66.66%;}
+    .body-9 {width: 75%;}
+    .body-10 {width: 83.33%;}
+    .body-11 {width: 91.66%;}
+    .body-12 {width: 100%;}
+}
+
