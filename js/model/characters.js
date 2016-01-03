@@ -40,8 +40,11 @@ Neighbor.prototype.randomResponse = function() {
 
 }*/
 
-var Competitor = function(name) {
+function Competitor(name) {
 	this.name = name;
+	this.Revenue = 
 }
 
-/*var pocketCash = */
+Competitor.prototype.getRevenue = function() {
+	var randomNum = Math.floor((Math.random() * 1,000,000,000 - 1)+1);
+}
