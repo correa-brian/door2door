@@ -37,7 +37,7 @@ function newGame() {
 			};
 
 		var neighbor1Response = neighbor1.randomResponse();
-		alert(neighbor1.name+ ": $" + price1 + ", eh? " + neighbor1Response);
+		alert(neighbor1.name+ ": $" + price1.toLocaleString() + ", eh? " + neighbor1Response);
 
 		var Profit1 = function() {
 			if (neighbor1Response === "Is that all? I'll double down") {
@@ -54,7 +54,7 @@ function newGame() {
 		var numberPurchased1 = Profit1()/price1;
 		var revenue1 = numberPurchased1*price1;
 
-		alert(neighbor1.name + " buys " + numberPurchased1 + "lbs. You make $" + revenue1 + ".");
+		alert(neighbor1.name + " buys " + numberPurchased1.toLocaleString() + "lbs. You make $" + revenue1.toLocaleString() + ".");
 			
 		//second stop
 
@@ -74,7 +74,7 @@ function newGame() {
 			};
 
 		var neighbor2Response = neighbor2.randomResponse();
-		alert(neighbor2.name+ ": $" + price2 + ", eh? " + neighbor2Response);
+		alert(neighbor2.name+ ": $" + price2.toLocaleString() + ", eh? " + neighbor2Response);
 
 		var Profit2 = function() {
 			if (neighbor2Response === "Is that all? I'll double down") {
@@ -91,7 +91,7 @@ function newGame() {
 		var numberPurchased2 = Profit2()/price2;
 		var revenue2 = numberPurchased2*price2;
 
-		alert(neighbor2.name + " buys " + numberPurchased2 + " hairs. You make $" + revenue2 + ".");
+		alert(neighbor2.name + " buys " + numberPurchased2.toLocaleString() + " hairs. You make $" + revenue2.toLocaleString() + ".");
 
 		//third stop
 
@@ -112,7 +112,7 @@ function newGame() {
 			};
 
 		var neighbor3Response = neighbor3.randomResponse();
-		alert(neighbor3.name+ ": $" + price3 + " dollars, hmmm..." + neighbor3Response);
+		alert(neighbor3.name+ ": $" + price3.toLocaleString() + " dollars, hmmm..." + neighbor3Response);
 
 		var Profit3 = function() {
 			if (neighbor3Response === "Is that all? I'll double down") {
@@ -129,7 +129,7 @@ function newGame() {
 		var numberPurchased3 = Profit3()/price3;
 		var revenue3 = numberPurchased3*price3;
 
-		alert(neighbor3.name + " buys " + numberPurchased3 + " 'chimes. You make $" + revenue3 + ".");
+		alert(neighbor3.name + " buys " + numberPurchased3.toLocaleString() + " 'chimes. You make $" + revenue3.toLocaleString() + ".");
 
 		console.log(revenue1);
 		console.log(revenue2);
@@ -139,8 +139,20 @@ function newGame() {
 		
 		console.log(totalRevenue);
 
-		var opponentRevenue = opponent.getRevenue();
-		console.log(opponentRevenue);
+		var opponentRevenue = function () {
+			var randomNum = Math.floor((Math.random() * 1000000000 - 1)+1);
+			if (randomNum > totalRevenue){
+				return "Looks like " + opponent.name + " beat you this time with $" + randomNum.toLocaleString() + " in cash - try again, you only made $" + totalRevenue.toLocaleString() + ".";
+			}
+			else if (randomNum < totalRevenue) {
+				return "You won! " + opponent.name + "made $" + randomNum.toLocaleString() + " but you made $" + totalRevenue.toLocaleString() + ".";
+			}
+			else {
+				return "Result is a tie  - $" + randomNum.toLocaleString() + " to $" + totalRevenue.toLocaleString() + "."
+			}
+		}
+
+		alert(opponentRevenue())
 	};
 };
 

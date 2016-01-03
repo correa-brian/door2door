@@ -42,9 +42,9 @@ Neighbor.prototype.randomResponse = function() {
 
 function Competitor(name) {
 	this.name = name;
-	this.Revenue = 
 }
 
-Competitor.prototype.getRevenue = function() {
+/*Competitor.prototype.getRevenue = function() {
 	var randomNum = Math.floor((Math.random() * 1,000,000,000 - 1)+1);
-}
+	return randomNum
+}*/
