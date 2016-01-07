@@ -1,28 +1,28 @@
 function newGame() {
-	var userInput = prompt("Do you want to play this game (Yes or No)?").toUpperCase();
+	var userInput = prompt("Follow the sound of my voice. Are you there? (yes or no)?").toUpperCase();
 	if (userInput === "YES") {
 		var playing = true; 
 	}
 	else if (userInput === "NO") {
 		var playing = false;
-		alert("Off with you then.")
+		alert("Good-bye, old friend. Wander back to your chariot, lest your seat grow cold in the winter's dew.")
 	}
 	else {
 		var playing = false;
-		alert("Need to respond with a YES or NO.")
+		alert("Respond with a YES or NO.")
 	};
 
 
 	while (playing) {
 		var playing = false;
 		
-		var opponent = prompt("Great to have you board. You'll need to give your competitor a name:");
+		var opponent = prompt("Today we stand, borne against a murder thronging, to play the will of your once friend, whom you hate by the way.  \n\nDo you remember the name?:");
 		var opponent = new Competitor(opponent);
-		alert(opponent.name+ ": "+ "I'm gonna kick your ass!");
+		var playerName = prompt(opponent.name+ ": "+ "Laugh out loud. A duty to your pathetic existence I need not shirk. When you're here, you're family. \n\nFor goodness, state you name:");
 
 		//first stop
 	
-		var neighbor1 = prompt("Those are fighting words if you ask me.\nNow that you've entered the danger zone and picked a villain for our fable, let's learn the rules to the game.\n\n1. The game is called Door2door\n2. You're a door2door salesman and your goal is to sell more groceries than"+ " "+ opponent.name+ "\n3. Give your first neighbor a name:");
+		var neighbor1 = prompt("Those are fighting words if you ask me, " + playerName + "." + "\nNow that you've entered the danger zone and picked a villain for our fable, let's learn the rules to the game.\n\n1. The game is called Door2door\n2. You're a door2door salesman and your goal is to sell more groceries than"+ " "+ opponent.name+ "\n3. Give your first neighbor a name:");
 		var neighbor1 =  new Neighbor(neighbor1);
 			
 		alert(neighbor1.name+ ": "+ "Hi there, I'm interested in buying some Chicken. Make me an offer.");
@@ -145,7 +145,7 @@ function newGame() {
 				return "Looks like " + opponent.name + " beat you this time with $" + randomNum.toLocaleString() + " in cash - try again, you only made $" + totalRevenue.toLocaleString() + ".";
 			}
 			else if (randomNum < totalRevenue) {
-				return "You won! " + opponent.name + "made $" + randomNum.toLocaleString() + " but you made $" + totalRevenue.toLocaleString() + ".";
+				return "You won! " + opponent.name + " made $" + randomNum.toLocaleString() + " but you made $" + totalRevenue.toLocaleString() + ".";
 			}
 			else {
 				return "Result is a tie  - $" + randomNum.toLocaleString() + " to $" + totalRevenue.toLocaleString() + "."
