@@ -1,0 +1,24 @@
+DOM – document object model
+
+Title:  – Door2Door
+
+Characters:
+
+-	You 
+o	Name, age, store name
+-	Competitor - Chad
+o	Personality type (Ruthless/Sensible/Pushover)
+-	Neighbor
+o	Name, groceries need, (of 3 items), haggler (Y/N)
+
+Classes:
+
+-	Neighbor
+-	Grocery
+
+Wins and Losses: 
+
+Win: Earn more money than your competitor
+Lose: Earn less money than your competitor
+
+Integrate w/ Angular into Rails app
